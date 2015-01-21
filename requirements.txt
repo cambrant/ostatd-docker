@@ -1,0 +1,4 @@
+Django==1.7.3
+psycopg2==2.5.4
+django-bootstrap3==5.0.3
+uwsgi==2.0.9
