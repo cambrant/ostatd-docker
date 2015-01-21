@@ -1,7 +1,7 @@
 FROM centos:7
 RUN yum -y install epel-release
 RUN yum -y update
-RUN yum -y install git python-devel python-pip libpqxx postgresql-devel gcc nginx supervisor expect
+RUN yum -y install git python-devel python-pip libpqxx postgresql-devel gcc nginx supervisor expect bind-utils telnet
 RUN yum clean all
 
 # Use full bash by default instead of sh
