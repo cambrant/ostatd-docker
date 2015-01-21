@@ -17,5 +17,6 @@ RUN cd /build/proxychains; git checkout proxychains-4.2.0; sh configure; make; m
 
 RUN git clone https://github.com/cambrant/tunneltelnet.git /build/tunneltelnet
 RUN sed -i 's/CONFIG_FILE=.*/CONFIG_FILE=\/app\/tunneltelnet.conf/g' /build/tunneltelnet/tunneltelnet
+RUN sed -i 's/ssh/ssh\ -o\ UserKnownHostsFile=\/dev\/null\ -o\ StrictHostKeyChecking=no/g' /build/tunneltelnet/tunneltelnet
 RUN cp /build/tunneltelnet/tunneltelnet /usr/bin/tunneltelnet
 RUN cp /build/tunneltelnet/tstee /usr/bin/tstee
